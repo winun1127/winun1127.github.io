@@ -1,0 +1,57 @@
+export const patents = [
+  {
+    id: "patent-2026-a11y-multiagent",
+    title: "멀티 에이전트 기반 웹 접근성 자동 진단 시스템 및 방법",
+    period: "2026.04",
+    status: "출원",
+    with: "SNC Lab",
+    applicationNo: "10-2026-0063068",
+    tags: ["AI Agent", "LLM", "UI/UX", "Accessibility"],
+    featured: 1,
+    image: "/images/patents/patent-2026-a11y-multiagent.png",
+    relatedProjects: [
+      "snc-a11y-expert-agent",
+      "snc-gui-a11y-eval-agent",
+    ] as string[],
+  },
+  {
+    id: "patent-2026-ui-design-guideline",
+    title:
+      "LLM 기반 AI 에이전트를 활용한 디자인 가이드라인 준수 UI 자동생성 시스템",
+    period: "2026.02",
+    status: "출원",
+    with: "현대자동차그룹 의왕연구소",
+    applicationNo: "10-2025-0199887",
+    tags: ["AI Agent", "LLM", "UI/UX", "Design System"],
+    featured: 2,
+    image: "/images/patents/patent-2026-ui-design-guideline.png",
+    relatedProjects: [
+      "hyundai-uiux-agentic-automation",
+      "hyundai-production-plan-ui-poc",
+    ] as string[],
+  },
+  {
+    id: "patent-2024-multimodal-fds",
+    title:
+      "이상 거래 탐지를 위한 멀티모달 기반 예측 모델에 대한 서버 및 그 구동 방법",
+    period: "2024.08",
+    status: "출원",
+    with: "onclev",
+    applicationNo: "10-2024-0117104",
+    tags: ["FDS", "GNN", "DL"],
+    featured: 3,
+    image: "/images/patents/patent-2024-multimodal-fds.png",
+    relatedProjects: ["onclev-illegal-account-detection"] as string[],
+  },
+  {
+    id: "patent-2024-newsletter-multiagent",
+    title: "다중 에이전트를 이용한 뉴스레터 생성 방법 및 장치",
+    period: "2024.08",
+    status: "출원",
+    with: "",
+    applicationNo: "10-2024-0102213",
+    tags: ["AI Agent", "LLM", "Multi-Agent"],
+    image: "/images/patents/patent-2024-newsletter-multiagent.png",
+    relatedProjects: ["ai-newsletter-generator-capstone"] as string[],
+  },
+];
