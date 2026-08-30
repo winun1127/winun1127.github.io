@@ -20,7 +20,7 @@ export const patents = [
       "LLM 기반 AI 에이전트를 활용한 디자인 가이드라인 준수 UI 자동생성 시스템",
     period: "2026.02",
     status: "출원",
-    with: "현대자동차그룹 의왕연구소",
+    with: "현대자동차 의왕연구소",
     applicationNo: "10-2025-0199887",
     tags: ["AI Agent", "LLM", "UI/UX", "Design System"],
     featured: 2,

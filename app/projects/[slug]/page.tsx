@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
+import { Fragment } from "react";
 
 import { Badge } from "@/components/ui/badge";
 import { Thumbnail } from "@/components/thumbnail";
@@ -8,6 +9,53 @@ import { patents, projects, publications } from "@/lib/data";
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
+}
+
+function renderInlineText(text: string) {
+  return text.split(/(\*\*.+?\*\*)/g).map((part, i) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return (
+        <strong key={i} className="font-semibold text-foreground">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    return <Fragment key={i}>{part}</Fragment>;
+  });
+}
+
+function renderFormattedBlock(text: string) {
+  return text.split("\n\n").map((paragraph, pIdx) => {
+    const lines = paragraph.split("\n");
+    const isList = lines.every(
+      (line, i) => i === 0 || line.trimStart().startsWith("-"),
+    );
+
+    if (isList && lines.length > 1) {
+      const [intro, ...items] = lines;
+      return (
+        <div key={pIdx}>
+          {intro && <p>{renderInlineText(intro)}</p>}
+          <ul className="mt-2 list-disc space-y-1.5 pl-5">
+            {items.map((item, i) => (
+              <li key={i}>{renderInlineText(item.replace(/^-\s*/, ""))}</li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
+
+    return (
+      <p key={pIdx}>
+        {lines.map((line, i) => (
+          <Fragment key={i}>
+            {i > 0 && <br />}
+            {renderInlineText(line)}
+          </Fragment>
+        ))}
+      </p>
+    );
+  });
 }
 
 export default async function ProjectDetailPage(
@@ -75,16 +123,14 @@ export default async function ProjectDetailPage(
             TL;DR
           </p>
           <p className="mt-2 font-serif text-lg italic leading-relaxed text-foreground/90">
-            {project.summary}
+            {renderInlineText(project.summary)}
           </p>
         </div>
       )}
 
       {project.description && (
         <div className="mt-10 max-w-4xl space-y-4 border-t border-border pt-8 text-sm leading-relaxed text-foreground/90">
-          {project.description.split("\n\n").map((paragraph, i) => (
-            <p key={i}>{paragraph}</p>
-          ))}
+          {renderFormattedBlock(project.description)}
         </div>
       )}
 
@@ -98,6 +144,21 @@ export default async function ProjectDetailPage(
               <li key={i}>{item}</li>
             ))}
           </ul>
+        </div>
+      )}
+
+      {project.skills.length > 0 && (
+        <div className="mt-10 max-w-4xl border-t border-border pt-8">
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            Skills
+          </p>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {project.skills.map((skill) => (
+              <Badge key={skill} variant="outline">
+                {skill}
+              </Badge>
+            ))}
+          </div>
         </div>
       )}
 

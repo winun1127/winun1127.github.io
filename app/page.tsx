@@ -115,13 +115,22 @@ export default function Home() {
         <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
           Skills
         </h2>
-        <div className="mt-4 flex flex-wrap gap-2 border-t border-border pt-6">
-          {cv.skills.map((skill) => (
-            <Badge key={skill} variant="outline">
-              {skill}
-            </Badge>
+        <ul className="mt-4 list-disc space-y-3 border-t border-border pl-5 pt-6">
+          {cv.skills.map(({ category, items }) => (
+            <li key={category}>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="font-mono text-sm text-muted-foreground">
+                  {category}
+                </span>
+                {items.map((item) => (
+                  <Badge key={item} variant="outline">
+                    {item}
+                  </Badge>
+                ))}
+              </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
 
       {/* Selected projects */}

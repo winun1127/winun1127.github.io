@@ -34,10 +34,6 @@ export const cv = {
   ],
   awards: [
     { period: "2025 — 2026", title: "한국장학재단 석사우수장학금 (이공계)" },
-    {
-      period: "2025",
-      title: "RISE AI-반도체 공동 교육과정 개발 퍼실리테이터 장학금",
-    },
     { period: "2025", title: "서울장학재단 AI서울테크장학금" },
     { period: "2023 — 2024", title: "한국장학재단 국가우수장학금 (이공계)" },
     { period: "2022", title: "성적우수" },
@@ -46,26 +42,21 @@ export const cv = {
     { period: "2019", title: "성적우수" },
   ],
   skills: [
-    "LangChain",
-    "LangGraph",
-    "Next.js",
-    "FastAPI",
-    "Vercel AI SDK",
-    "vLLM",
-    "Ollama",
-    "Hugging Face",
-    "Python",
-    "TypeScript",
-    "PostgreSQL",
-    "Prisma",
-    "Supabase",
-    "Convex",
-    "Docker",
-    "GitHub",
-    "GitLab",
-    "Confluence",
-    "Jira",
-    "Slack",
-    "Linux",
+    {
+      category: "언어/프레임워크",
+      items: ["Python", "TypeScript", "Next.js", "FastAPI", "PyTorch"],
+    },
+    {
+      category: "LLM/Agent",
+      items: ["LangChain", "LangGraph", "Vercel AI SDK", "vLLM", "Ollama"],
+    },
+    {
+      category: "데이터/백엔드",
+      items: ["PostgreSQL", "Prisma", "SQL", "Pandas", "Supabase", "Convex"],
+    },
+    {
+      category: "인프라/협업",
+      items: ["Docker", "Linux", "GitHub", "GitLab", "Confluence", "Jira"],
+    },
   ],
 };

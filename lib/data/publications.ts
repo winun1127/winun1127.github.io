@@ -7,7 +7,7 @@ export const publications = [
     venue: "CHI 2027",
     year: 2027,
     type: "Conference",
-    status: "In Preparation",
+    status: "Under Review",
     tags: ["AI Agent", "LLM", "UI/UX", "Design System"],
     abstract:
       "Large language model (LLM) agents are increasingly used for user interface (UI) generation, yet enterprise settings require compliance with organizational design systems. However, it remains unclear how design system knowledge might be provided to agents, and how practitioners actually interact with them. Study 1 compares three context engineering strategies—instruction-based, context-based, and registry-based—for design system-compliant UI generation. Results show that the registry-based strategy achieved the highest compliance and visual similarity, while other strategies were less accurate but more cost-efficient. Study 2 identifies three prompting strategy types—Full-spec Starter, Layout-first Builder, and Low-spec Starter—of practitioners by characterizing real-world interactions with a deployed LLM agent-based design system-compliant UI generation, revealing differences in upfront specification and subsequent behavior. Together, these studies offer empirical guidance for selecting context engineering strategies based on desired compliance granularity and for understanding how users interact with LLM agents for UI generation.",
@@ -23,7 +23,7 @@ export const publications = [
     venue: "CHI 2027",
     year: 2027,
     type: "Conference",
-    status: "In Preparation",
+    status: "Under Review",
     tags: ["AI Agent", "LLM", "UI/UX", "Accessibility"],
     abstract:
       "Large language model-based agents are increasingly used for automated web accessibility auditing by invoking existing hard-coded checkers as tools. However, current approaches suffer from two fundamental limitations: (1) a broad task scope requires a single agent to audit multiple accessibility criteria simultaneously, causing reasoning interference; and (2) noisy observations introduced by tool outputs force the agent to reason over large amounts of criterion-irrelevant context, degrading audit performance. To address these limitations, we propose A11yAuditor, a novel agentic workflow consisting of two complementary components: (i) per-criterion audit decomposes accessibility auditing into dedicated criterion-specific agents, transforming broad task scopes into focused reasoning tasks; and (ii) agentic search persists tool outputs in a virtual filesystem and enables each agent to actively retrieve only criterion-relevant evidence, enabling precise context retrieval. Together, these components reduce reasoning interference and context noise during agent execution. We evaluate both A11yAuditor and a representative tool-using agent baseline against real-world accessibility audit reports produced by certified human experts as ground truth. Experimental results show that A11yAuditor significantly improves accessibility audit performance, achieving higher precision, recall, and F1 through focused task scopes and precise context retrieval. Ablation studies reveal that per-criterion audit and agentic search contribute synergistically, while scalability experiments demonstrate that the proposed workflow remains robust as the number of accessibility criteria increases.",
@@ -72,7 +72,7 @@ export const publications = [
   {
     id: "publication-2025-clone-mci-diagnosis",
     title:
-      "CLONE: synthetic guideline-based clinical reasoning with large language models for early diagnosis of mild cognitive impairment",
+      "CLONE: Synthetic Guideline-based Clinical Reasoning with LLMs for Early Diagnosis of Mild Cognitive Impairment",
     authors: [
       "SeungEon Cha",
       "Jinseok Park",
