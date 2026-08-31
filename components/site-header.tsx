@@ -21,7 +21,7 @@ const labels: Record<string, string> = {
   "/projects": "Projects",
   "/publications": "Publications",
   "/patents": "Patents",
-  "/cv": "CV",
+  "/resume": "Resume",
 };
 
 type Crumb = { label: string; href?: string };

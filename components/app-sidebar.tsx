@@ -33,7 +33,7 @@ const navItems = [
   { href: "/projects", label: "Projects", icon: Folder },
   { href: "/publications", label: "Publications", icon: BookOpen },
   { href: "/patents", label: "Patents", icon: Lightbulb },
-  { href: "/cv", label: "CV", icon: ScrollText },
+  { href: "/resume", label: "Resume", icon: ScrollText },
 ];
 
 function GithubMark(props: React.SVGProps<SVGSVGElement>) {
