@@ -113,7 +113,7 @@ export function AppSidebar() {
               tooltip="LinkedIn"
               render={
                 <a
-                  href="https://www.linkedin.com/in/seungeon-cha-9b7359335/"
+                  href="https://www.linkedin.com/in/%EC%8A%B9%EC%96%B8-%EC%B0%A8-9b7359335/"
                   target="_blank"
                   rel="noreferrer"
                 />
